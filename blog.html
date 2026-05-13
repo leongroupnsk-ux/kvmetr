@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Блог о ремонте — прототип</title>
+    <meta name="description" content="Каталог статей с рубриками, поиском и лид-магнитом." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="На главную"><img src="./assets/logo.svg" alt="Логотип" /></a>
+        <nav class="nav" aria-label="Основное меню">
+          <div class="dd" data-dd>
+            <button type="button" aria-haspopup="true" aria-expanded="false">Услуги <span aria-hidden="true">▾</span></button>
+            <div class="dd-menu" role="menu">
+              <a href="./index.html#services" role="menuitem">Ремонт под ключ <span>Бизнес‑класс, сроки и фиксация цены</span></a>
+              <a href="./index.html#estimate" role="menuitem">Смета и договор <span>Прозрачность до начала работ</span></a>
+              <a href="./index.html#process" role="menuitem">Контроль онлайн <span>Фотоотчёты и кабинет клиента</span></a>
+            </div>
+          </div>
+          <a href="./case.html">Портфолио</a>
+          <a href="./blog.html" aria-current="page">Блог</a>
+          <a href="./index.html#about">О компании</a>
+          <a href="./index.html#contacts">Контакты</a>
+        </nav>
+        <div class="header-right">
+          <a class="phone" href="tel:+79990000000" aria-label="Позвонить">📞 +7 (999) 000‑00‑00</a>
+          <button class="burger" type="button" data-burger aria-label="Открыть меню">≡</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section compact">
+        <div class="container" data-blog>
+          <div class="kicker">Блог</div>
+          <h1 class="h1">Блог о ремонте, который читают перед началом работ</h1>
+          <div class="filters" aria-label="Рубрики (фильтр)">
+            <button type="button" class="active" data-filter="all">Все</button>
+            <button type="button" data-filter="finance">Управление и финансы</button>
+            <button type="button" data-filter="legal">Юридическая защита</button>
+            <button type="button" data-filter="inside">Внутренняя кухня</button>
+            <button type="button" data-filter="engineering">Инженерные решения</button>
+            <button type="button" data-filter="design">Дизайн и эргономика</button>
+          </div>
+          <div style="margin-top: 10px; display:none" data-mobile-only>
+            <select class="input" data-filter-select aria-label="Выбор рубрики">
+              <option value="all">Все</option>
+              <option value="finance">Управление и финансы</option>
+              <option value="legal">Юридическая защита</option>
+              <option value="inside">Внутренняя кухня</option>
+              <option value="engineering">Инженерные решения</option>
+              <option value="design">Дизайн и эргономика</option>
+            </select>
+          </div>
+          <div class="blog-layout" style="margin-top: 18px">
+            <div>
+              <div class="post card" data-post data-cat="finance" style="margin-bottom: 14px">
+                <div class="thumb" aria-hidden="true"></div>
+                <div class="body">
+                  <div class="title">Скрытые работы: зачем подписывать, если ничего не видно</div>
+                  <div class="meta">Управление и финансы • Читать 5 мин</div>
+                  <a class="btn small" href="./article.html" style="margin-top: 10px">Читать →</a>
+                </div>
+              </div>
+              <div class="post card" data-post data-cat="legal" style="margin-bottom: 14px">
+                <div class="thumb" aria-hidden="true"></div>
+                <div class="body">
+                  <div class="title">Фиксация цены в договоре: юридические нюансы</div>
+                  <div class="meta">Юридическая защита • Читать 7 мин</div>
+                  <a class="btn small" href="./article.html" style="margin-top: 10px">Читать →</a>
+                </div>
+              </div>
+              <div class="post card" data-post data-cat="inside" style="margin-bottom: 14px">
+                <div class="thumb" aria-hidden="true"></div>
+                <div class="body">
+                  <div class="title">1 день с прорабом: 12 часов на объектах</div>
+                  <div class="meta">Внутренняя кухня • Читать 4 мин</div>
+                  <a class="btn small" href="./article.html" style="margin-top: 10px">Читать →</a>
+                </div>
+              </div>
+              <div class="card pad" aria-label="Пагинация (демо)">
+                <div class="fine">Пагинация: <span class="pill">1</span> <a class="pill" href="./blog.html">2</a> <a class="pill" href="./blog.html">3</a></div>
+              </div>
+            </div>
+            <aside class="sidebar">
+              <div class="card pad">
+                <div class="h3">🔍 Поиск по блогу</div>
+                <form data-lead style="display:flex; gap: 10px; align-items:center">
+                  <input class="input" type="search" name="q" placeholder="Введите запрос" aria-label="Поиск" />
+                  <button class="btn small" type="submit">Найти</button>
+                </form>
+              </div>
+              <div class="card pad">
+                <div class="h3">Популярные статьи</div>
+                <ul class="list">
+                  <li><a href="./article.html">Смета “на коленке”: как распознать риск</a></li>
+                  <li><a href="./article.html">Приёмка у застройщика: чек‑лист</a></li>
+                  <li><a href="./article.html">День с прорабом: как контролировать</a></li>
+                </ul>
+              </div>
+              <div class="card pad">
+                <div class="h3">Баннер с лид‑магнитом</div>
+                <p class="lead" style="margin-top:0">Скачайте чек‑лист приёмки квартиры у застройщика.</p>
+                <form data-lead>
+                  <div class="field"><label>Email</label><input class="input" type="email" name="email" placeholder="you@example.com" /></div>
+                  <div class="form-actions"><button class="btn primary" type="submit">Скачать PDF</button><div class="fine">Согласие на обработку данных.</div></div>
+                </form>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div><img src="./assets/logo.svg" alt="Логотип" style="height: 28px; width:auto" /><div class="fine" style="margin-top:10px">Каталог статей (демо).</div></div>
+        <div><div class="title">Меню</div><div style="display:flex; flex-direction:column; gap: 8px"><a href="./index.html">Главная</a><a href="./case.html">Портфолио</a><a href="./index.html#contacts">Контакты</a></div></div>
+        <div><div class="title">Контакты</div><div style="display:flex; flex-direction:column; gap: 8px"><a href="tel:+79990000000">+7 (999) 000‑00‑00</a><a href="mailto:hello@example.ru">hello@example.ru</a></div></div>
+        <div><div class="title">Действие</div><button class="btn small primary" type="button" data-open-modal>Заказать звонок</button></div>
+      </div>
+    </footer>
+    <div class="modal" data-modal aria-hidden="true">
+      <div class="modal-backdrop" aria-hidden="true"></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Заказать звонок">
+        <div class="modal-head"><div class="ttl">Заказать звонок</div><button type="button" data-close-modal aria-label="Закрыть">✕</button></div>
+        <div class="modal-body">
+          <div class="card pad">
+            <form data-lead>
+              <div class="form-row">
+                <div class="field"><label>Имя</label><input class="input" type="text" name="name" placeholder="Имя" /></div>
+                <div class="field"><label>Телефон</label><input class="input" type="tel" name="phone" placeholder="+7 (___) ___‑__‑__" /></div>
+              </div>
+              <div class="form-actions"><button class="btn primary" type="submit">Позвоните мне</button><div class="fine">Согласие на обработку данных.</div></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-mobile-nav aria-hidden="true">
+      <div class="modal-backdrop" aria-hidden="true"></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Меню">
+        <div class="modal-head"><div class="ttl">Меню</div><button type="button" data-mobile-close aria-label="Закрыть">✕</button></div>
+        <div class="modal-body" style="display:flex; flex-direction:column; gap: 10px">
+          <a class="btn" href="./index.html">Главная</a>
+          <a class="btn" href="./case.html">Портфолио</a>
+          <a class="btn primary" href="./index.html#cta">Рассчитать стоимость</a>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./script.js"></script>
+    <script>
+      const mobileOnly = document.querySelector('[data-mobile-only]');
+      if (mobileOnly && window.matchMedia('(max-width: 680px)').matches) mobileOnly.style.display = 'block';
+    </script>
+  </body>
+</html>
+
